@@ -1,0 +1,34 @@
+hash: c3610a7a099cebf3c3c011c7670f36bb5a48407f0aeed1843aacb481d7f1c98e
+updated: 2016-07-23T13:58:09.429913079-07:00
+imports:
+- name: github.com/caarlos0/env
+  version: 8030fe5519ecb59ee38cb3c534b86dc868f23262
+- name: github.com/golang/protobuf
+  version: 874264fbbb43f4d91e999fecb4b40143ed611400
+  subpackages:
+  - proto
+- name: github.com/willf/bitset
+  version: 2e6e8094ef4745224150c88c16191c7dceaad16f
+- name: github.com/willf/bloom
+  version: aa3071d9203598166c09553d43e74b588c3d91be
+- name: golang.org/x/net
+  version: 4d38db76854b199960801a1734443fd02870d7e1
+  subpackages:
+  - context
+  - http2
+  - trace
+  - http2/hpack
+  - lex/httplex
+  - internal/timeseries
+- name: google.golang.org/grpc
+  version: afdabe5738c5296bd52692f9577185d95bd5e828
+  subpackages:
+  - codes
+  - credentials
+  - grpclog
+  - internal
+  - metadata
+  - naming
+  - transport
+  - peer
+testImports: []

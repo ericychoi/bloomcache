@@ -1,0 +1,11 @@
+package: github.com/ericychoi/bloomcache
+import:
+- package: github.com/caarlos0/env
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/willf/bloom
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
