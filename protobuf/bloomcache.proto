@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package protobuf;
+
+// The greeting service definition.
+service Bloomcache {
+  // Adds a key
+  rpc Add (Request) returns (Response){}
+
+  // Checks for existence of a key
+  rpc Check (Request) returns (CheckResponse) {}
+}
+
+message Request {
+  string key = 1;
+}
+
+message Response {
+string error = 1;
+}
+
+message CheckResponse {
+  bool exists = 1;
+  string error = 2;
+}
