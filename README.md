@@ -1,12 +1,27 @@
 # bloomcache
 
-## Development
+Bloomcache is a simple cache server backed by a bloom filter.
 
-### Install
+It relies on [GRPC](http://www.grpc.io/) to handle requests.  A simple client is provided, but you may use any GRPC client that implements protobuf specified in [github.com/ericychoi/bloomcache/protobuf/bloomcache.proto](https://github.com/ericychoi/bloomcache/blob/master/protobuf/bloomcache.proto).
+
+## Install
 ```bash
 go get github.com/ericychoi/bloomcache
 source $GOPATH/src/github.com/ericychoi/bloomcache/development.env && bcserver
 ```
+A test client is provided in `bin/client`
+
+```bash
+% cd $GOPATH/src/github.com/ericychoi/bloomcache
+% go run bin/client.go -key test -add
+% go run bin/client.go -key test -check
+2016/07/23 11:49:25 test exists
+```
+
+
+
+
+## Development
 
 ### Test
 ```bash
@@ -18,15 +33,6 @@ source $GOPATH/src/github.com/ericychoi/bloomcache/development.env && bcserver
 --- PASS: TestServer (0.00s)
 PASS
 ok  	github.com/ericychoi/bloomcache	8.101s
-```
-
-A test client is provided in `bin/client`
-
-```bash
-% cd $GOPATH/src/github.com/ericychoi/bloomcache
-% go run bin/client.go -key test -add
-% go run bin/client.go -key test -check
-2016/07/23 11:49:25 test exists
 ```
 
 ### Benchmark
