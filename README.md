@@ -1,5 +1,7 @@
 # bloomcache
 
+![](http://g.recordit.co/qVehaUERci.gif)
+
 Bloomcache is a simple cache server backed by a bloom filter.
 
 It relies on [GRPC](http://www.grpc.io/) to handle requests.  A simple client is provided, but you may use any GRPC client that implements protobuf specified in [github.com/ericychoi/bloomcache/protobuf/bloomcache.proto](https://github.com/ericychoi/bloomcache/blob/master/protobuf/bloomcache.proto).
@@ -17,9 +19,6 @@ A test client is provided in `bin/client`
 % go run bin/client.go -key test -check
 2016/07/23 11:49:25 test exists
 ```
-
-
-
 
 ## Development
 
